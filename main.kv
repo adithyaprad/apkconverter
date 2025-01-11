@@ -1,0 +1,76 @@
+ScreenManagement:
+    MainScreen:
+    SMSScreen:
+    BillScreen:
+    VoiceScreen:
+    MultilingualVoiceScreen:
+    QueryBotScreen:
+
+<MainScreen>:
+    name: 'main'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Expense Tracker'
+            font_size: 32
+        Button:
+            text: 'SMS'
+            on_release: root.manager.current = 'sms'
+        Button:
+            text: 'Bill'
+            on_release: root.manager.current = 'bill'
+        Button:
+            text: 'Voice'
+            on_release: root.manager.current = 'voice'
+        Button:
+            text: 'Multilingual Voice'
+            on_release: root.manager.current = 'multilingual_voice'
+        Button:
+            text: 'Query Bot'
+            on_release: root.manager.current = 'query_bot'
+
+<SMSScreen>:
+    name: 'sms'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'SMS Expense Tracking'
+            font_size: 24
+        Label:
+            id: sms_label
+            text: 'Checking SMS Permissions...'
+        Button:
+            text: 'Back to Main'
+            on_release: root.manager.current = 'main'
+
+<BillScreen>:
+    name: 'bill'
+    Label:
+        text: 'Bill Feature (Coming Soon)'
+    Button:
+        text: 'Back to Main'
+        on_release: root.manager.current = 'main'
+
+<VoiceScreen>:
+    name: 'voice'
+    Label:
+        text: 'Voice Input (Coming Soon)'
+    Button:
+        text: 'Back to Main'
+        on_release: root.manager.current = 'main'
+
+<MultilingualVoiceScreen>:
+    name: 'multilingual_voice'
+    Label:
+        text: 'Multilingual Voice Input (Coming Soon)'
+    Button:
+        text: 'Back to Main'
+        on_release: root.manager.current = 'main'
+
+<QueryBotScreen>:
+    name: 'query_bot'
+    Label:
+        text: 'Query Bot (Coming Soon)'
+    Button:
+        text: 'Back to Main'
+        on_release: root.manager.current = 'main'
